@@ -8,6 +8,7 @@ require 'strava/entities/segment'
 require 'strava/entities/stream'
 require 'strava/request'
 require 'strava/segments'
+require 'strava/streams'
 
 module Strava
   class << self
