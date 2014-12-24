@@ -28,11 +28,16 @@ Or install it yourself as:
 
 ### List starred segment
 
-    Segments.new.starred
+    Strava::Segments.new.starred
 
 ### Retrieve segment streams
 
-    Segments.new.streams(segment_id: 3506498, resolution: 'low', series_type: 'distance')
+    Strava::Segments.new.streams(3506498, resolution: 'low', series_type: 'distance')
+
+Or,
+
+    segments = Strava::Segments.new.starred
+    segments.first.streams(resolution: 'low', series_type: 'distance')
 
 ## Contributing
 

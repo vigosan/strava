@@ -9,7 +9,7 @@ module Strava
 
         before do
           allow(Strava::Segments).to receive_message_chain(:new, :streams).
-            with(segment_id: segment_id).
+            with(segment_id, {}).
             and_return(streams)
           allow(Strava::Streams).to receive(:new).with(streams).
             and_return(streams)

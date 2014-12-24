@@ -89,7 +89,7 @@ module Strava
         stub_request(:get, url).
           to_return(status: 200, body: body, headers: headers)
 
-        streams = Segments.new.streams(segment_id: 3506498, resolution: 'low', series_type: 'distance')
+        streams = Segments.new.streams(3506498, resolution: 'low', series_type: 'distance')
         stream = streams.first
 
         expect(stream.type).to eq('latlng')

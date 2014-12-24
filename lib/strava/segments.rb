@@ -5,7 +5,7 @@ module Strava
       build_segments(segments_attrs)
     end
 
-    def streams(segment_id:, types: 'latlong', **opts)
+    def streams(segment_id, types: 'latlong', **opts)
       path = "segments/#{segment_id}/#{types}"
       path << "?#{build_query(opts)}" if opts.any?
       streams_attrs = request(:get, path)
